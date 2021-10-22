@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+
+        let size = 100
+        let growFlag = true
+document.body.style.height= "10000px"
+const div = document.createElement("div")
+document.body.appendChild(div)
+div.style.position = 'fixed'
+div.style.top = '0'
+div.style.left = '0'
+div.style.width = '100%'
+div.style.height = size + "px"
+div.style.backgroundColor =  "green"
+
+function changeHeight(){
+
+    if (size>window.innerHeight/2){
+        growFlag = !growFlag
+        div.style.backgroundColor =  "red"
+    } 
+    else if (size<=0){
+        growFlag = !growFlag
+        div.style.backgroundColor =  "pink"
+    }
+    if(growFlag){
+        size+= 10;
+    }
+else {
+        size-= 10;
+    }
+    div.style.height = size + "px" 
+}
+window.addEventListener("scroll", changeHeight)
+
+    </script>
+</body>
+</html>
