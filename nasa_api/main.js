@@ -1,9 +1,6 @@
 const btn = document.querySelector('button');
 const input = document.querySelector("input");
-const passwords = ['jedEN', 'DwA'];
-const messages = ["super", "działa!"]
-let wrrong = 'welcome'
-const url = 'www.nasa.com'
+
 
 
 
@@ -30,11 +27,8 @@ console.log(response)
    useApiData(data)
 }
 function useApiData(data){
-
 document.querySelector('#content').innerHTML += data.explanation
-
 document.querySelector('#content').innerHTML += `<img src = "${data.url}">`
-
 
 
 }
